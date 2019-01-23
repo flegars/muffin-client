@@ -1,0 +1,6 @@
+language: node_js
+
+services:
+  - docker
+script:
+  - docker-compose up 

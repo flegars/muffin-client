@@ -1,0 +1,25 @@
+{
+  "name": "muffinbot",
+  "version": "1.0.0",
+  "description": "<p align=\"center\"> \r <img src=\"https://media.discordapp.net/attachments/453638831481290769/453871226360692738/botbot.png?width=599&height=630\" width=\"150\">\r </p>",
+  "main": "app.js",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Florian-lg/MuffinBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Florian-lg/MuffinBot/issues"
+  },
+  "homepage": "https://github.com/Florian-lg/MuffinBot#readme"
+}
