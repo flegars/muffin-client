@@ -1,17 +1,32 @@
-const discord =  require('discord.js');
-const fs = require('fs');
+const DISCORD =  require('discord.js');
+const FS = require('fs');
 
-const bot = new discord.Client();
-const data = fs.readFileSync('./token.txt')
+const BOT = new DISCORD.Client();
+const DATA = FS.readFileSync('./token.txt')
 
-bot.on('ready', () => {
-    console.log(`Logged in as ${bot.user.tag}!`);
+BOT.on('ready', () => {
+    console.log(`Logged in as ${BOT.user.tag}!`);
   });
 
-bot.on("message", message => {
-    if(message.content == 'hello') {
-        message.reply('world');
+BOT.on("message", message => {
+    if(message.content == '!ancien') {
+        message.guild.members.forEach( member => {
+            let userJoined = new Date(Date.now() - new Date(member.joinedTimestamp).getTime());
+            let age = Math.abs(userJoined.getFullYear() - 1970);
+            if(age > 1) { 
+                try {
+                    member.addRole('551210548914683908'); 
+                } catch (error) {
+                    console.error(error);
+                } 
+            }
+        });
+        commandUsed(message.content);
     }  
 });
 
-bot.login(data.toString());
+function commandUsed(message) {
+    console.log(`Command ${message} used`);
+}
+
+BOT.login(DATA.toString());
