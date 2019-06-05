@@ -4,6 +4,7 @@
   "description": "<p align=\"center\"> \r <img src=\"https://media.discordapp.net/attachments/453638831481290769/453871226360692738/botbot.png?width=599&height=630\" width=\"150\">\r </p>",
   "main": "app.js",
   "dependencies": {
+    "axios": "^0.19.0",
     "discord.js": "^11.4.2",
     "fs": "0.0.1-security"
   },
