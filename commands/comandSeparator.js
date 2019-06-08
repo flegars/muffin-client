@@ -1,6 +1,7 @@
 const UpdateRoles = require('./updateRoles');
 const FunCommands = require('./funCommands');
 const RandomPerks = require('./dbd/RandomPerks');
+const Thiercelieux = require('./thiercelieux/Game');
 
 module.exports = class CommandSeparator {
 
@@ -20,6 +21,8 @@ module.exports = class CommandSeparator {
                 console.log(`RandomPerks used by ${message.member.displayName}`);
                 RandomPerks.parse(message);
                 break;
+            case '!loupgarou':
+                console.log(`Thiercelieux used by ${message.member.displayName}`)
         }
 
     }
