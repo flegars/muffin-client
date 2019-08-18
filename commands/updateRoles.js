@@ -14,11 +14,15 @@ module.exports = class UpdateRoles extends Command {
             user.roles.forEach( role => {
                 roles.push(role.id);
             });
-            members.push([user.id, user.joinedTimestamp, roles]);
+            members.push([
+                user.id,
+                user.joinedTimestamp,
+                roles
+                ]);
         });
 
         for(let i = 0; i < members.length; i++) {
-            var roles =  members[i][2];
+            var roles = members[i][2];
             var user = message.guild.member(members[i][0]);
             var date = Date.now() - members[i][1];
             var daysDifference =  Math.floor(date/1000/60/60/24);
