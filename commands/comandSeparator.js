@@ -3,6 +3,7 @@ const FunCommands = require('./funCommands');
 const RandomPerks = require('./dbd/RandomPerks');
 const Game = require('./thiercelieux/Game');
 const RegisterPlayer = require('./thiercelieux/RegisterPlayer');
+const SendRoles = require('./thiercelieux/SendRoles');
 
 module.exports = class CommandSeparator {
 
@@ -30,6 +31,10 @@ module.exports = class CommandSeparator {
             case '!register':
                 console.log(`Register used by ${message.member.displayName}`);
                 RegisterPlayer.parse(message);
+                break;
+            case '!send-roles':
+                console.log(`SendRoles used by ${message.member.displayName}`);
+                SendRoles.parse(message);
                 break;
         }
     }
