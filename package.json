@@ -9,7 +9,9 @@
     "sqlite": "^3.0.3"
   },
   "devDependencies": {
-    "eslint": "^6.1.0"
+    "eslint": "^6.2.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

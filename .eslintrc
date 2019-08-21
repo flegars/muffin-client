@@ -1,7 +1,0 @@
-{
-    "extends": "eslint:recommended", // Ajoute quelques règles par défaut
-    "rules": {
-      "quotes": [2, "single"], // On modifie cette règle car on préfère les single quotes
-      "no-alert": 1
-    }
-  }
