@@ -21,7 +21,7 @@ module.exports = class RandomPerks extends Command {
         }
 
         const embed = new Discord.RichEmbed();
-
+        
         embed
           .setTitle((splittedMessage == 'survivor') ? '**SURVIVANT**' : '**TUEUR**')
           .setAuthor(message.member.displayName, message.member.user.avatarURL)
@@ -33,7 +33,6 @@ module.exports = class RandomPerks extends Command {
         for (let i = 0; i < 4; i++) {
           embed.addField(`Perk n° ${i + 1}`, perkArr[i].perk_name, true);
         }
-
         return message.channel.send(embed);
       });
   }

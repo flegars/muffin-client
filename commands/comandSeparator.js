@@ -28,7 +28,6 @@ module.exports = class CommandSeparator {
         RegisterPlayer.parse(message);
         break;
       case '!send-roles':
-        console.log(`SendRoles used by ${message.member.displayName}`);
         SendRoles.parse(message);
         break;
     }

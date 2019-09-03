@@ -1,5 +1,5 @@
 const Command = require('../command');
-const Service = require('../../services');
+const axios = require('axios');
 
 module.exports = class RegisterPlayer extends Command {
 
@@ -8,13 +8,15 @@ module.exports = class RegisterPlayer extends Command {
   }
 
   static action(message) {
-    const msg = message.channel.send(`Tu as bien été ajouté, <@${message.member.id}>`);
-    const params = {
-      displayName: message.content.split(' ')[1],
-      //id: parseInt(message.member.id.substr(-4)),
-      id: message.member.id
-    };
-    let service = new Service();
-    service.postAction('new-player', msg, params);
+    axios.post('http://127.0.0.1:8080/api/new-player', ({
+        display_name: message.content.split(' ')[1],
+        id: message.member.id
+      }))
+      .then(function () {
+        message.channel.send(`Tu as bien été ajouté , <@${message.member.id}>`);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
-};
+}
