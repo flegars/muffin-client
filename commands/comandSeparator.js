@@ -1,30 +1,25 @@
-const UpdateRoles = require('./updateRoles');
-const RandomPerks = require('./dbd/RandomPerks');
-const Game = require('./thiercelieux/Game');
-const RegisterPlayer = require('./thiercelieux/RegisterPlayer');
-const SendRoles = require('./thiercelieux/SendRoles');
+const UpdateRoles = require('./guild-management/update-guild-roles');
+const RandomPerks = require('./games/dbd/random-perks');
+const Game = require('./games/thiercelieux/game/game-creation/new-game-message');
+const RegisterPlayer = require('./games/thiercelieux/players/player-registration/register-player-message');
+const SendRoles = require('./games/thiercelieux/roles/roles-sending/send-roles-message');
 
 module.exports = class CommandSeparator {
 
   static identifyMessage(message) {
-
     const messageReceived = message.content.split(' ')[0];
-    console.log(messageReceived);
+
     switch (messageReceived) {
       case '!update':
-        console.log(`UpdateRoles used by ${message.member.displayName}`);
         UpdateRoles.parse(message);
         break;
       case '!random':
-        console.log(`RandomPerks used by ${message.member.displayName}`);
         RandomPerks.parse(message);
         break;
       case '!loupgarou':
-        console.log(`Game used by ${message.member.displayName}`);
         Game.parse(message);
         break;
       case '!register':
-        console.log(`Register used by ${message.member.displayName}`);
         RegisterPlayer.parse(message);
         break;
       case '!send-roles':

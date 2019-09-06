@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const axios = require('axios');
-const Command = require('../command');
+const Command = require('../../command');
 
 module.exports = class RandomPerks extends Command {
 
@@ -20,8 +20,7 @@ module.exports = class RandomPerks extends Command {
           perkArr.push(response.data[Math.random() * response.data.length | 0]);
         }
 
-        const embed = new Discord.RichEmbed();
-        
+        const embed = new Discord.RichEmbed();        
         embed
           .setTitle((splittedMessage == 'survivor') ? '**SURVIVANT**' : '**TUEUR**')
           .setAuthor(message.member.displayName, message.member.user.avatarURL)

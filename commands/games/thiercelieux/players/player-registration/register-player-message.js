@@ -1,5 +1,6 @@
-const Command = require('../command');
+const Command = require('../../../../command');
 const axios = require('axios');
+
 
 module.exports = class RegisterPlayer extends Command {
 
