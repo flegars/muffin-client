@@ -1,6 +1,10 @@
 const Discord = require('discord.js');
 
 module.exports = class RolesEmbed {
+
+    /**
+     * @param {String} role 
+     */
     embedRole(role) {
         const embed = new Discord.RichEmbed();
         embed
