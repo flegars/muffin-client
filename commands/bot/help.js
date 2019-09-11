@@ -18,6 +18,6 @@ module.exports = class Help extends Command {
                 .addField('!new-game **[@players...]**', 'Lance une nouvelle partie de loup-garou')
                 .addField('!register **your_name**', 'Pour t\'enregistrer dans le jeu')
                 .addField('!send-roles', 'Envoie les rôles des différents joueurs');
-            return message.channel.send(embed);            
+            return message.channel.send(embed);           
         }
 }

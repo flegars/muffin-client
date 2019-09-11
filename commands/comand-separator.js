@@ -29,6 +29,9 @@ module.exports = class CommandSeparator {
       case '!help':
         Help.parse(message);
         break;
+      case '!stop-game':
+        StopGame.parse(message);
+        break;
     }
   }
 };
