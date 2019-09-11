@@ -5,7 +5,7 @@ const gameCreation = require('./game-creation')
 module.exports = class NewGame extends Command {
 
     static match(message) {
-        return message.content.startsWith('!loupgarou');
+        return message.content.startsWith('!new-game');
     }
 
     static action(message) {
@@ -17,7 +17,6 @@ module.exports = class NewGame extends Command {
                 players.push(player.replace('<@', '').replace('>', '').replace('!', '').replace('<', '').trim());
             }
         }); 
-
         game.createGame(players);
     }
 }

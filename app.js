@@ -1,11 +1,12 @@
 const Discord = require('discord.js');
 const Config = require('./config.json');
-const CommandSeparator = require('./commands/comandSeparator');
+const CommandSeparator = require('./commands/comand-separator');
 
 const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('Muffin robot inc !');
+    client.user.setActivity('claquer des fesses', { type: 'PLAYING'});
 });
 
 client.on('message', message => {

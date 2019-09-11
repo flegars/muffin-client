@@ -3,6 +3,7 @@ const RandomPerks = require('./games/dbd/random-perks');
 const Game = require('./games/thiercelieux/game/game-creation/new-game-message');
 const RegisterPlayer = require('./games/thiercelieux/players/player-registration/register-player-message');
 const SendRoles = require('./games/thiercelieux/roles/roles-sending/send-roles-message');
+const Help = require('./bot/help');
 
 module.exports = class CommandSeparator {
 
@@ -24,6 +25,9 @@ module.exports = class CommandSeparator {
         break;
       case '!send-roles':
         SendRoles.parse(message);
+        break;
+      case '!help':
+        Help.parse(message);
         break;
     }
   }
