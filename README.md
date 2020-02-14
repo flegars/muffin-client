@@ -2,10 +2,20 @@
 <img src="https://media.discordapp.net/attachments/453638831481290769/453871226360692738/botbot.png?width=599&height=630" width="150">
 </p>
 
-[![Build Status](https://travis-ci.org/Florian-lg/MuffinBot.svg?branch=master)](https://travis-ci.org/Florian-lg/MuffinBot)
+### Commands
 
-<h2>Commands</h2>
-<ul>
-  <li><code>!help</code><i>will give you a list of all commands</i>
-</ul>
+#### Global / Server
+
+**!help** → gives you a list of all available commands 
+
+#### Dead by daylight
+
+**!random** [survivor/killer] → Generate random perks, you can choose between survivor or killer
+
+#### Loup-garou
+
+**!loupgarou** player 1 player 2 ... → Create a new game<br />
+**!register** player → Add a new player to the database, mandatory to get score<br />
+**!send-roles** → Send roles to all players in the game<br />
+**!stop-game** → Stop the game (You must be the person who create the game)
 
