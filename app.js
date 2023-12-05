@@ -6,7 +6,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('Muffin robot inc !');
-    client.user.setActivity('claquer des fesses', { type: 'PLAYING'});
+    client.user.setActivity('MUFFIN', { type: 'PLAYING'});
 });
 
 client.on('message', message => {
